@@ -1,0 +1,382 @@
+# grème — AI Shopping App + Website
+
+Build a complete production-ready shopping platform called **grème**.
+
+The brand name must always appear exactly as **grème**, lowercase, including the `è`.
+
+I need TWO working products from the same project:
+
+1. A responsive website that anyone can open in a browser.
+2. A real standalone Android shopping application that can eventually be built as an installable APK.
+
+Do NOT build this as a simple demo or static mockup.
+
+## Technology
+
+Use a stable, maintainable architecture suitable for both web and Android.
+
+Use:
+
+* React Native
+* Expo
+* React Native Web
+* Supabase
+* JavaScript/TypeScript
+* responsive layouts
+* environment variables for secrets/configuration
+
+The Android application must NOT require Expo Go to function after it is built.
+
+The website and Android app must use the same Supabase backend.
+
+## Existing Supabase project
+
+I already have a Supabase project.
+
+Use Supabase for:
+
+* authentication
+* products
+* users
+* cart
+* wishlist
+* addresses
+* orders
+* order items
+* reviews
+
+Never expose a Supabase service-role/secret key in client-side code.
+
+Use only the public/publishable key on the client.
+
+## Brand
+
+Brand name:
+
+**grème**
+
+Colors:
+
+Forest green: #164A36
+Dark green: #103528
+Secondary green: #245D45
+Cream: #F7F1E6
+Tan: #D8C2A4
+White: #FFFFFF
+Text: #17231D
+Muted: #718078
+
+Design style:
+
+* premium
+* elegant
+* minimalist
+* modern
+* clean
+* luxury-inspired
+* mobile-first
+* feminine but not overly decorative
+
+Use the lowercase grème branding everywhere.
+
+## Home page
+
+Create:
+
+* grème logo/name
+* tagline: "shop beautifully."
+* search bar
+* hero section
+* categories
+* featured products
+* new arrivals
+* best sellers
+* sale products
+* product cards
+* wishlist buttons
+* Add to Cart buttons
+
+Categories:
+
+* All
+* Fashion
+* Beauty
+* Home
+* Accessories
+
+## Product cards
+
+Every product card should display:
+
+* product image
+* product name
+* current price
+* old price when available
+* discount when available
+* wishlist button
+* Add to Cart button
+
+## Product details
+
+Create a complete product details page containing:
+
+* image gallery
+* product name
+* price
+* old price
+* description
+* category
+* quantity selector
+* size selector when applicable
+* color selector when applicable
+* Add to Cart
+* Buy Now
+* Wishlist
+* related products
+* reviews
+
+## Search
+
+Implement real product search using Supabase data.
+
+Support:
+
+* product name search
+* category filtering
+* price filtering
+* sorting
+* newest
+* price low to high
+* price high to low
+* best rated
+
+## Cart
+
+Create a fully working cart.
+
+Users can:
+
+* add products
+* remove products
+* change quantity
+* see subtotal
+* see discounts
+* see delivery charge
+* see final total
+* continue shopping
+* checkout
+
+Persist cart data for logged-in users.
+
+## Wishlist
+
+Users can:
+
+* add products
+* remove products
+* view wishlist
+* move wishlist products to cart
+
+## Authentication
+
+Create:
+
+* Register
+* Login
+* Logout
+* Forgot Password
+* Profile
+
+Use Supabase Auth.
+
+Do not create fake authentication.
+
+## Orders
+
+Create:
+
+* checkout
+* order creation
+* order history
+* order details
+* order status
+
+Order statuses:
+
+* Pending
+* Confirmed
+* Packed
+* Shipped
+* Out for delivery
+* Delivered
+* Cancelled
+
+## Admin
+
+Create an admin dashboard.
+
+Admin can:
+
+* add products
+* edit products
+* delete products
+* upload product images
+* manage stock
+* change prices
+* manage categories
+* manage orders
+* update order status
+* manage featured products
+* manage banners
+
+Protect admin functionality with proper authorization.
+
+Normal customers must never access admin functions.
+
+## Database
+
+Use properly structured Supabase tables for:
+
+* profiles
+* products
+* categories
+* product_images
+* cart
+* cart_items
+* wishlist
+* addresses
+* orders
+* order_items
+* reviews
+
+Use Row Level Security.
+
+Users must only access their own private data.
+
+Products that are published can be publicly viewed.
+
+Only authorized admins can manage products and orders.
+
+## Website
+
+Make the website fully responsive.
+
+Desktop:
+
+* navigation
+* grème logo
+* search
+* categories
+* account
+* wishlist
+* cart
+
+Mobile:
+
+* compact header
+* search
+* responsive product cards
+* bottom navigation
+
+Pages:
+
+* Home
+* Shop
+* Categories
+* Product
+* Wishlist
+* Cart
+* Checkout
+* Login
+* Register
+* Profile
+* Orders
+* About
+* Contact
+* Privacy Policy
+* Terms
+
+## Android
+
+Application name:
+
+**grème**
+
+Android package ID:
+
+**com.greme.shop**
+
+The Android app must:
+
+* start reliably
+* never depend on Expo Go after production build
+* handle loading states
+* handle network failures
+* handle empty states
+* handle authentication errors
+* work on low and mid-range Android phones
+* use optimized images
+* avoid unnecessary native dependencies
+* avoid startup crashes
+
+## Important
+
+Do NOT use placeholder buttons that don't work.
+
+Do NOT create fake products if Supabase products are available.
+
+Connect the UI to the actual Supabase products table.
+
+If the existing Supabase schema differs from the requested schema, inspect the available schema first and adapt to it rather than destroying existing tables.
+
+Do NOT delete existing Supabase data.
+
+Do NOT overwrite the existing Supabase project.
+
+Before making destructive database changes, ask for confirmation.
+
+## Existing product fields
+
+The existing products table currently contains fields similar to:
+
+* id
+* name
+* price
+* image_url
+* description
+* category
+* created_at
+* old_price
+* emoji
+
+Use these existing fields where possible.
+
+## Stability
+
+Prioritize stability over unnecessary complexity.
+
+Create reusable components.
+
+Keep dependencies minimal.
+
+Add error handling.
+
+Do not introduce packages unless necessary.
+
+Make the application easy to build into a standalone Android APK.
+
+## Final objective
+
+Build a real shopping platform called:
+
+**grème**
+
+with:
+
+**Website + Android App + Supabase Backend + Admin Dashboard**
+
+The website and Android app must share the same products, users, carts, wishlists and orders.
+
+Start by creating the project structure and core navigation, then implement the UI and Supabase integration.
+
+Do not stop at a visual mockup. Build functional features.
