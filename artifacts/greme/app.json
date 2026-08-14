@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "grème",
+    "slug": "greme",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.greme.shop",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#164A36"
+      }
+    },
+    "icon": "./assets/images/icon.png",
+    "scheme": "greme",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7F1E6"
+    },
+    "ios": {
+      "supportsTablet": false
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
