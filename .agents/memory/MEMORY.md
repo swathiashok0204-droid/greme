@@ -1,1 +1,2 @@
 - [Supabase REST permission diagnostics](supabase-rest-permissions.md) — distinguish table privilege failures from RLS behavior using the publishable client.
+- [Expo public environment variables](expo-public-env-secrets.md) — map client-safe Supabase secrets to `EXPO_PUBLIC_*` at Expo startup.
