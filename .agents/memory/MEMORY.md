@@ -1,0 +1,1 @@
+- [Supabase REST permission diagnostics](supabase-rest-permissions.md) — distinguish table privilege failures from RLS behavior using the publishable client.

@@ -68,7 +68,12 @@ export async function listProducts(options?: {
     );
   }
 
-  let query = supabase.from('products').select('*').limit(100);
+  let query = supabase
+    .from('products')
+    .select(
+      'id,name,price,image_url,description,category,created_at,old_price,emoji',
+    )
+    .limit(100);
   const search = options?.search?.trim();
   if (search) query = query.ilike('name', `%${search}%`);
   if (options?.category && options.category !== 'All') {
@@ -101,7 +106,9 @@ export async function getProduct(id: string): Promise<Product> {
   }
   const { data, error } = await supabase
     .from('products')
-    .select('*')
+    .select(
+      'id,name,price,image_url,description,category,created_at,old_price,emoji',
+    )
     .eq('id', id)
     .maybeSingle();
   if (error) throw error;
